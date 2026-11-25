@@ -1,0 +1,66 @@
+%%
+%% Copyright (C) 2026 Benjamim Lima Neto
+%%
+%% This work may be distributed and/or modified under
+%% the conditions of the LaTeX Project Public License,
+%% either version 1.3c of this license or (at your option)
+%% any later version.
+%%
+%% The latest version of this license is at:
+%% https://www.latex-project.org/lppl.txt
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% The Current Maintainer of this work is SEU NOME.
+%%
+%% This work consists of the file garrafitapet.sty.
+%%
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{garrafitapet}[2026/11/25 v1.0 Klein bottle miniature]
+
+\RequirePackage{tikz}
+
+\newcommand{\garrafaklein}{%
+  \begin{tikzpicture}[baseline=-0.1ex, scale=0.14,
+    line width=0.55pt, line cap=round, line join=round]
+
+    % 1. Left outer wall
+    \draw (-0.75, 0.3)
+      .. controls (-0.75, 1.0) and (-0.28, 1.35) .. (-0.28, 1.9)
+      .. controls (-0.28, 2.55) and (0.95, 2.55) .. (0.95, 1.8)
+      .. controls (0.95, 1.45) and (0.72, 1.25) .. (0.50, 1.05);
+
+    % 2. Inner neck wall
+    \draw (0.12, 1.55)
+      .. controls (0.10, 1.70) and (0.10, 1.80) .. (0.10, 1.9)
+      .. controls (0.10, 2.15) and (0.55, 2.15) .. (0.55, 1.8)
+      .. controls (0.55, 1.60) and (0.45, 1.42) .. (0.32, 1.25);
+
+    % 3. Right outer wall
+    \draw (0.75, 0.3)
+      .. controls (0.75, 0.65) and (0.65, 0.90) .. (0.50, 1.05);
+    \draw (0.32, 1.25)
+      .. controls (0.20, 1.38) and (0.14, 1.48) .. (0.12, 1.55);
+
+    % 4. Internal tube
+    \draw[densely dashed, dash pattern=on 1.2pt off 1pt]
+      (0.50, 1.05)
+      .. controls (0.28, 0.85) and (0.18, 0.35) .. (0.18, -0.35);
+    \draw[densely dashed, dash pattern=on 1.2pt off 1pt]
+      (0.32, 1.25)
+      .. controls (0.02, 0.98) and (-0.18, 0.35) .. (-0.18, -0.35);
+
+    % 5. Bottom base
+    \draw (-0.75, 0.3)
+      .. controls (-0.75, -0.25) and (-0.35, -0.35) .. (-0.18, -0.35);
+    \draw (0.75, 0.3)
+      .. controls (0.75, -0.25) and (0.35, -0.35) .. (0.18, -0.35);
+
+    % 6. Bottom opening
+    \draw (0, -0.35) ellipse (0.18 and 0.06);
+
+  \end{tikzpicture}%
+}
+
+\endinput
