@@ -1,0 +1,73 @@
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{garrafitapet}
+
+\geometry{margin=2.5cm}
+
+\title{\texttt{garrafitapet}\\
+\large A Tiny LaTeX Package for Drawing a Klein Bottle}
+
+\author{Benjamim Lima Neto}
+\date{Version 1.0 -- November 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+The \texttt{garrafitapet} package provides
+a miniature TikZ illustration of the Klein bottle.
+
+Its purpose is to make it easy to insert a
+representation of this fascinating mathematical
+object into LaTeX documents.
+
+\section{Requirements}
+
+The package requires TikZ/PGF.
+
+TikZ is loaded automatically by the package.
+
+\section{Installation}
+
+Place the file \texttt{garrafitapet.sty}
+in the same directory as your main LaTeX document.
+
+Load the package in the preamble:
+
+\begin{verbatim}
+\usepackage{garrafitapet}
+\end{verbatim}
+
+\section{Usage}
+
+To insert the Klein bottle, simply write:
+
+\begin{verbatim}
+\garrafaklein
+\end{verbatim}
+
+\section{Illustration}
+
+Here is the miniature Klein bottle:
+
+\begin{center}
+\garrafaklein
+\end{center}
+
+\section{License}
+
+This package is distributed under the
+LaTeX Project Public License (LPPL),
+version 1.3c or later.
+
+See the accompanying LICENSE file.
+
+\end{document}
